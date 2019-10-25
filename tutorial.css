@@ -1,0 +1,133 @@
+body{
+  font-family: 'Noto Serif KR', serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 40px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+@media (max-width: 800px){
+  h1{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 28px;
+  }
+}
+.table{
+  margin: auto;
+  margin-bottom: 120px;
+  width: 70%;
+}
+@media (max-width: 800px){
+  .table{
+    font-size: 12px;
+    width: 90%;
+  }
+}
+.table td, .table th{
+  vertical-align: middle;
+}
+.check{
+  width: 10%;
+  text-align: center;
+}
+.title{
+  width: 55%;
+}
+.writer{
+  width: 33%;
+}
+.delete_button{
+  width: 2%;
+  padding: 3px !important;
+  text-align: right;
+  color: #b0b0b0;
+  vertical-align: middle !important;
+}
+
+.float{
+	position: fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#98bd9c;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+
+a:hover{
+  color: #ffffff;
+}
+a#add_button.float{
+  color: #ffffff;
+}
+
+.modal{
+  margin-top: 100px;
+}
+
+.modal-title{
+  text-align: center;
+  font-weight: 500;
+}
+
+.modal-button{
+  text-align: right;
+  margin-right: 10px;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #ffffff75;
+  color: #9a9a9a; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 5px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.3s 0.8s;
+  animation: fadein 0.5s, fadeout 0.3s 0.8s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0px; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0px; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0px; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0px; opacity: 0;}
+}

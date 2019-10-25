@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css">
+  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu|Nanum+Gothic+Coding:700|Noto+Serif+KR:300" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="booklist.css">
+
+
+ <meta charset="UTF-8">
+ <title>붕북쓰</title>
+ </head>
+
+<body>
+  <!-- comment here-->
+  <h1> 책</h1>
+  <div class = "booknumber" id = "counts"></div>
+  <table id = "table" class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col" class="check" id = "check_mode"><i class = "far fa-square"></i></th>
+        <th scope="col" class="title" id = 'by_title'>제목</th>
+        <th scope="col" class="writer" id = 'by_writer'>저자</th>
+        <th scope="col" class="delete_button"><i class="far fa-times-circle fa-xs delete_icon" style="opacity:0"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <div class="modal fade" id="add_modal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <h4 class="modal-title">새 책</h4></br>
+          <div class="form-group">
+        	  <input type="text" class="form-control" placeholder="제목" id = "new_title">
+          </div>
+          <div class="form-group">
+        	  <input type="text" class="form-control" placeholder="저자" id = "new_writer">
+          </div>
+          <div class = "modal-button" databackdrop = "static">
+            <i class="fas fa-plus fa-2x" data-dismiss="modal" data-backdrop = "static" id = "add_data" style = "color:#98bd9c"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href = "#" id = "add_button" class = "float" data-toggle = "modal" data-target = "#add_Modal">
+    <i class="fa fa-plus my-float"></i>
+  </a>
+  <div id="snackbar"><i class="far fa-copy"></i></div>
+  <script src="js/jquery-1.9.0.min.js"></script>
+  <script src="js/booklist.js"></script>
+  <script src="bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+</body>
+
+</html>
