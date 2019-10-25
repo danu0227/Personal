@@ -1,1 +1,1 @@
-# [Project-1](https://danu0227.github.io/Project-1/)
+# [Personal](https://danu0227.github.io/Personal/)
