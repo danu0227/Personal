@@ -117,40 +117,41 @@ function drawtable(list){
       }
 
       line_title.onclick = function(){
-        var el = document.createElement('textarea');
-        var range;
-        el.value = a.title;
-        el.setAttribute('readonly', '');
-        el.style = {position: 'absolute', left: '-9999px'};
-        document.body.appendChild(el);
-        el.select();
-        if (navigator.userAgent.match(/ipad|iphone/i)) {
-          document.activeElement.blur();
-          el.blur();
-          el.contentEditable = false;
-          el.readOnly = true;
-          var editable = el.contentEditable;
-          var readOnly = el.readOnly;
-
-          el.contentEditable = true;
-          el.readOnly = false;
-          var range = document.createRange();
-          range.selectNodeContents(el);
-
-          var selection = window.getSelection();
-          selection.removeAllRanges();
-          selection.addRange(range);
-          el.setSelectionRange(0, 999999);
-          el.contentEditable = editable;
-          el.readOnly = readOnly;
-       } else {
-           el.select();
-       }
-        document.execCommand('copy');
-        document.body.removeChild(el);
-        var snackbar = document.getElementById("snackbar");
-        snackbar.className = "show";
-        setTimeout(function(){ snackbar.className = snackbar.className.replace("show", "");}, 1000)
+        window.open('https://library.kaist.ac.kr/search/ctlgSearch/posesn/list.do?q='+a.title, 'blank_')
+       //  var el = document.createElement('textarea');
+       //  var range;
+       //  el.value = a.title;
+       //  el.setAttribute('readonly', '');
+       //  el.style = {position: 'absolute', left: '-9999px'};
+       //  document.body.appendChild(el);
+       //  el.select();
+       //  if (navigator.userAgent.match(/ipad|iphone/i)) {
+       //    document.activeElement.blur();
+       //    el.blur();
+       //    el.contentEditable = false;
+       //    el.readOnly = true;
+       //    var editable = el.contentEditable;
+       //    var readOnly = el.readOnly;
+       //
+       //    el.contentEditable = true;
+       //    el.readOnly = false;
+       //    var range = document.createRange();
+       //    range.selectNodeContents(el);
+       //
+       //    var selection = window.getSelection();
+       //    selection.removeAllRanges();
+       //    selection.addRange(range);
+       //    el.setSelectionRange(0, 999999);
+       //    el.contentEditable = editable;
+       //    el.readOnly = readOnly;
+       // } else {
+       //     el.select();
+       // }
+       //  document.execCommand('copy');
+       //  document.body.removeChild(el);
+       //  var snackbar = document.getElementById("snackbar");
+       //  snackbar.className = "show";
+       //  setTimeout(function(){ snackbar.className = snackbar.className.replace("show", "");}, 1000)
       }
 
       table_line.appendChild(line_check);
